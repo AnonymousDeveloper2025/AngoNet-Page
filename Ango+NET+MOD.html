@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>ANGO NET MOD TOLKEN PASS</title>
+
+<style>
+    body {
+        background: #001429;
+        font-family: Arial, sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #00264d;
+        padding: 25px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #66b3ff;
+        letter-spacing: 1px;
+        box-shadow: 0 0 15px #000;
+    }
+
+    .container {
+        width: 85%;
+        margin: auto;
+        margin-top: 30px;
+        line-height: 1.6;
+    }
+
+    .section {
+        background: #002040;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 10px #000;
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h2 {
+        color: #66b3ff;
+        margin-bottom: 10px;
+    }
+
+    /* Botões animados */
+    .btn {
+        background: #003366;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 240px;
+        transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 0 0px #004080;
+    }
+
+    .btn:hover {
+        background: #004080;
+        transform: scale(1.05);
+        box-shadow: 0 0 12px #1a75ff;
+    }
+
+    .btn:active {
+        transform: scale(0.95);
+        box-shadow: 0 0 5px #66b3ff;
+    }
+
+    /* Barra de progresso */
+    #progressBar {
+        width: 100%;
+        height: 22px;
+        background: #ccc;
+        margin-top: 15px;
+        border-radius: 5px;
+        overflow: hidden;
+        display: none;
+    }
+
+    #progressFill {
+        height: 100%;
+        width: 0%;
+        background: #0066ff;
+        transition: width 0.1s linear;
+    }
+
+    /* Rodapé */
+    footer {
+        background: #111;
+        padding: 25px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #ccc;
+        border-top: 2px solid #333;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+<script>
+function gerarTolken(dias) {
+    const random = Math.random().toString(36).substring(2, 12).toUpperCase();
+    alert("TOLKEN PASS (" + dias + "): " + random);
+}
+
+function baixarAPK() {
+    document.getElementById("progressBar").style.display = "block";
+    let fill = document.getElementById("progressFill");
+    let width = 0;
+
+    let interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+            alert("Download concluído! (Simulação)");
+        } else {
+            width++;
+            fill.style.width = width + "%";
+        }
+    }, 50);
+}
+</script>
+
+</head>
+<body>
+
+<header>ANGO NET MOD TOLKEN PASS</header>
+
+<div class="container">
+
+    <div class="section">
+        <h2>TOLKEN PASS - 3 dias</h2>
+        <p>
+            O TOLKEN PASS de 3 dias é ideal para usuários que desejam testar o serviço
+            rapidamente ou precisam de acesso temporário à aplicação. Ele garante acesso
+            total às funcionalidades essenciais do Ango Net Mod durante o período ativo.
+        </p>
+        <button class="btn" onclick="gerarTolken('3 dias')">Gerar TOLKEN</button>
+    </div>
+
+    <div class="section">
+        <h2>TOLKEN PASS - 5 dias</h2>
+        <p>
+            A opção de 5 dias oferece um equilíbrio perfeito entre tempo e praticidade.
+            Usuários que utilizam o app com frequência moderada costumam preferir esta
+            modalidade, garantindo estabilidade e segurança no acesso.
+        </p>
+        <button class="btn" onclick="gerarTolken('5 dias')">Gerar</button>
+    </div>
+
+    <div class="section">
+        <h2>TOLKEN PASS - 7/30 dias</h2>
+        <p>
+            Para quem busca autonomia prolongada, os passes de 7 e 30 dias são as melhores
+            escolhas. Eles permitem uso contínuo sem interrupções, ideal para quem depende
+            do Ango Net Mod diariamente.
+        </p>
+        <button class="btn" onclick="gerarTolken('7/30 dias')">Gerar</button>
+    </div>
+
+    <div class="section">
+        <h2>Informações Importantes</h2>
+        <p>
+            OS TOLKEN PASS SÃO USADOS PARA ACESSAR A APP ANGO NET MOD, E SEM ELES O APP
+            FICA BLOQUEADO E TOTALMENTE INUTILIZÁVEL, ATÉ VOCÊ GERAR OUTRO TOLKEN DE ENTRADA.
+        </p>
+        <p>
+            O sistema foi desenvolvido para garantir segurança, estabilidade e controle
+            total sobre o acesso dos usuários. Cada TOLKEN é único e temporário, evitando
+            uso indevido ou acessos não autorizados.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Download da Última Versão</h2>
+        <button class="btn" onclick="baixarAPK()">BAIXAR LATEST APK - ANGO NET VPN</button>
+
+        <div id="progressBar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Ango NET Mod VPN — Todos os direitos reservados.  
+    Termos e condições aplicáveis.  
+    <br><br>
+    Made by @∀nonymous🎭 Developer.
+</footer>
+
+</body>
+</html>
